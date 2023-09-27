@@ -11,9 +11,15 @@ import SnapKit
 
 class LabelViewController: UIViewController {
     
+    // MARK: - ui component
     
+    private let uiLabelView: UILabelView = UILabelView()
 
     // MARK: - life cycle
+    
+    override func loadView() {
+        self.view = uiLabelView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
