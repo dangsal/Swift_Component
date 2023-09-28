@@ -30,3 +30,26 @@ iOS(16.4)
 - drawText
 - preferredMaxLayoutWidth
 - showsExpansionTextWhenTruncated
+
+## UIButton
+
+iOS(16.4)
+- ButtonType
+- Role
+- tintColor
+- isPointerInteractionEnabled
+- setTitle
+- setTitleColor
+- setPreferredSymbolConfiguration
+- menu
+- showsMenuAsPrimaryAction
+- changesSelectionAsPrimaryAction
+- setImage
+- setBackgroundImage
+- titleLabel
+- imageView
+- subtitleLabel
+- contentVerticalAlignment
+- contentHorizontalAlignment
+- title
+- currentTitle
