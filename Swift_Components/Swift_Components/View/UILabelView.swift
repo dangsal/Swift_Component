@@ -9,10 +9,6 @@ import UIKit
 
 import SnapKit
 
-protocol UILabelViewDelegate: AnyObject {
-    func nextButtonDidTap()
-}
-
 // FIXME: iOS 16.4 기준이고 iOS 17의 기능은 추가 할 예정
 
 final class UILabelView: UIView {
@@ -96,28 +92,17 @@ final class UILabelView: UIView {
     
     // MARK: - property
     
-    private weak var delegate: UILabelViewDelegate?
-    
     // MARK: - init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureUI()
         self.setupLayout()
-        self.setupButtonAction()
     }
     
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func setupButtonAction() {
-        let nextButtonDidTap = UIAction { [weak self] _ in
-            self?.delegate?.nextButtonDidTap()
-        }
-        
-        nextButton.addAction(nextButtonDidTap, for: .touchUpInside)
     }
     
     private func configureUI() {
@@ -179,8 +164,8 @@ final class UILabelView: UIView {
         }
     }
     
-    func configureDelegate(_ delegate: UILabelViewDelegate) {
-        self.delegate = delegate
+    func configureDelegate(_ commoneDelegate: CommonButtonDelegate) {
+        self.nextButton.delegate = commoneDelegate
     }
 }
 

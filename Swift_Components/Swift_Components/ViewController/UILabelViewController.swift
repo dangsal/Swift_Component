@@ -31,11 +31,10 @@ class LabelViewController: UIViewController {
     private func setupDelegate() {
         self.uiLabelView.configureDelegate(self)
     }
-    
 }
 
-extension LabelViewController: UILabelViewDelegate {
-    func nextButtonDidTap() {
+extension LabelViewController: CommonButtonDelegate {
+    func didTapUIButton() {
         let viewController = UIButtonViewController()
         self.navigationController?.pushViewController(viewController, animated: true)
     }

@@ -9,12 +9,18 @@ import UIKit
 
 import SnapKit
 
+protocol CommonButtonDelegate: AnyObject {
+    func didTapUIButton()
+}
+
 final class CommonButton: UIButton {
+    
+    weak var delegate: CommonButtonDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureUI()
-        self.setupLayout()
+        self.menu = setupButtonMenu()
     }
     
     @available(*, unavailable)
@@ -25,11 +31,15 @@ final class CommonButton: UIButton {
     private func configureUI() {
         self.backgroundColor = .systemBlue
     }
-    
-    private func setupLayout() {
 
+    private func setupButtonMenu() -> UIMenu {
+        let uibutton = UIAction(title: "UILabel") { [weak self] _ in
+            self?.delegate?.didTapUIButton()
+        }
+        
+        let menu = UIMenu(title: "어떤 컴포넌트로?", children: [uibutton])
+        return menu
     }
-    
 }
 
 #if canImport(SwiftUI) && DEBUG
