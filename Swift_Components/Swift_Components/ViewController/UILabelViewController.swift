@@ -23,7 +23,20 @@ class LabelViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupDelegate()
+    }
+    
+    // MARK: - func
+    
+    private func setupDelegate() {
+        self.uiLabelView.configureDelegate(self)
     }
     
 }
 
+extension LabelViewController: UILabelViewDelegate {
+    func nextButtonDidTap() {
+        let viewController = UIButtonViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+}

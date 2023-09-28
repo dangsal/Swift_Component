@@ -17,6 +17,8 @@
 		D769E50B2AC4626F00DA735A /* UILabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769E50A2AC4626F00DA735A /* UILabelView.swift */; };
 		D769E50E2AC462B000DA735A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D769E50D2AC462B000DA735A /* SnapKit */; };
 		D769E5102AC462B000DA735A /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D769E50F2AC462B000DA735A /* SnapKit-Dynamic */; };
+		D769E5152AC5162200DA735A /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769E5142AC5162200DA735A /* CommonButton.swift */; };
+		D769E5172AC5194400DA735A /* UIButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769E5162AC5194400DA735A /* UIButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		D769E5042AC4618300DA735A /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 		D769E5062AC461A300DA735A /* UIView+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		D769E50A2AC4626F00DA735A /* UILabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelView.swift; sourceTree = "<group>"; };
+		D769E5142AC5162200DA735A /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
+		D769E5162AC5194400DA735A /* UIButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				D769E4F22AC460B300DA735A /* UILabelViewController.swift */,
+				D769E5162AC5194400DA735A /* UIButtonViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -104,9 +109,18 @@
 		D769E5092AC4625800DA735A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D769E5132AC5161000DA735A /* UIComponent */,
 				D769E50A2AC4626F00DA735A /* UILabelView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D769E5132AC5161000DA735A /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				D769E5142AC5162200DA735A /* CommonButton.swift */,
+			);
+			path = UIComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D769E5172AC5194400DA735A /* UIButtonViewController.swift in Sources */,
+				D769E5152AC5162200DA735A /* CommonButton.swift in Sources */,
 				D769E4F32AC460B300DA735A /* UILabelViewController.swift in Sources */,
 				D769E4EF2AC460B300DA735A /* AppDelegate.swift in Sources */,
 				D769E4F12AC460B300DA735A /* SceneDelegate.swift in Sources */,

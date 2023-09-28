@@ -9,6 +9,10 @@ import UIKit
 
 import SnapKit
 
+protocol UILabelViewDelegate: AnyObject {
+    func nextButtonDidTap()
+}
+
 // FIXME: iOS 16.4 기준이고 iOS 17의 기능은 추가 할 예정
 
 final class UILabelView: UIView {
@@ -83,6 +87,16 @@ final class UILabelView: UIView {
         label.showsExpansionTextWhenTruncated = true
         return label
     }()
+    private let nextButton: CommonButton = {
+        let button = CommonButton(type: .system)
+        button.setTitle("다음", for: .normal)
+        button.tintColor = .white
+        return button
+    }()
+    
+    // MARK: - property
+    
+    private weak var delegate: UILabelViewDelegate?
     
     // MARK: - init
     
@@ -90,11 +104,20 @@ final class UILabelView: UIView {
         super.init(frame: frame)
         self.configureUI()
         self.setupLayout()
+        self.setupButtonAction()
     }
     
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupButtonAction() {
+        let nextButtonDidTap = UIAction { [weak self] _ in
+            self?.delegate?.nextButtonDidTap()
+        }
+        
+        nextButton.addAction(nextButtonDidTap, for: .touchUpInside)
     }
     
     private func configureUI() {
@@ -147,6 +170,17 @@ final class UILabelView: UIView {
             $0.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).inset(20)
 //            $0.height.equalTo(150)
         }
+        
+        self.addSubview(self.nextButton)
+        self.nextButton.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).inset(20)
+            $0.height.equalTo(80)
+        }
+    }
+    
+    func configureDelegate(_ delegate: UILabelViewDelegate) {
+        self.delegate = delegate
     }
 }
 
