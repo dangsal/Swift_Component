@@ -9,9 +9,14 @@ import UIKit
 
 final class UIButtonViewController: UIViewController {
     
-
+    private let uiButtonView: UIButtonView = UIButtonView()
     
     // MARK: - life cycle
+    
+    override func loadView() {
+        super.loadView()
+        self.view = self.uiButtonView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
