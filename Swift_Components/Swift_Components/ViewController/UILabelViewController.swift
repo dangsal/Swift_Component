@@ -38,4 +38,9 @@ extension LabelViewController: CommonButtonDelegate {
         let viewController = UIButtonViewController()
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    func didTapImageView() {
+        let viewController = UIImageViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }

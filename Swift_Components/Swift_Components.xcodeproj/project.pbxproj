@@ -20,6 +20,8 @@
 		D769E5152AC5162200DA735A /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769E5142AC5162200DA735A /* CommonButton.swift */; };
 		D769E5172AC5194400DA735A /* UIButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769E5162AC5194400DA735A /* UIButtonViewController.swift */; };
 		D769E51B2AC520FB00DA735A /* UIButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769E51A2AC520FB00DA735A /* UIButtonView.swift */; };
+		D7A396922ACD20FA00518ACB /* UIImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A396912ACD20FA00518ACB /* UIImageViewController.swift */; };
+		D7A396942ACD211200518ACB /* UIImageViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A396932ACD211200518ACB /* UIImageViewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		D769E5142AC5162200DA735A /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
 		D769E5162AC5194400DA735A /* UIButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonViewController.swift; sourceTree = "<group>"; };
 		D769E51A2AC520FB00DA735A /* UIButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonView.swift; sourceTree = "<group>"; };
+		D7A396912ACD20FA00518ACB /* UIImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewController.swift; sourceTree = "<group>"; };
+		D7A396932ACD211200518ACB /* UIImageViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 			children = (
 				D769E4F22AC460B300DA735A /* UILabelViewController.swift */,
 				D769E5162AC5194400DA735A /* UIButtonViewController.swift */,
+				D7A396912ACD20FA00518ACB /* UIImageViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 				D769E5132AC5161000DA735A /* UIComponent */,
 				D769E50A2AC4626F00DA735A /* UILabelView.swift */,
 				D769E51A2AC520FB00DA735A /* UIButtonView.swift */,
+				D7A396932ACD211200518ACB /* UIImageViewView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +215,8 @@
 				D769E51B2AC520FB00DA735A /* UIButtonView.swift in Sources */,
 				D769E4EF2AC460B300DA735A /* AppDelegate.swift in Sources */,
 				D769E4F12AC460B300DA735A /* SceneDelegate.swift in Sources */,
+				D7A396942ACD211200518ACB /* UIImageViewView.swift in Sources */,
+				D7A396922ACD20FA00518ACB /* UIImageViewController.swift in Sources */,
 				D769E5072AC461A300DA735A /* UIView+Preview.swift in Sources */,
 				D769E5052AC4618300DA735A /* UIViewController+Preview.swift in Sources */,
 				D769E50B2AC4626F00DA735A /* UILabelView.swift in Sources */,

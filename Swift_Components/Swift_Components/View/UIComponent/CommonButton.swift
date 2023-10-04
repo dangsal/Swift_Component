@@ -11,6 +11,7 @@ import SnapKit
 
 protocol CommonButtonDelegate: AnyObject {
     func didTapUIButton()
+    func didTapImageView()
 }
 
 final class CommonButton: UIButton {
@@ -33,11 +34,14 @@ final class CommonButton: UIButton {
     }
 
     private func setupButtonMenu() -> UIMenu {
-        let uibutton = UIAction(title: "UILabel") { [weak self] _ in
+        let uiButton = UIAction(title: "UIButton") { [weak self] _ in
             self?.delegate?.didTapUIButton()
         }
+        let uiImageView = UIAction(title: "UIImageView") { [weak self] _ in
+            self?.delegate?.didTapImageView()
+        }
         
-        let menu = UIMenu(title: "어떤 컴포넌트로?", children: [uibutton])
+        let menu = UIMenu(title: "어떤 컴포넌트로?", children: [uiButton, uiImageView])
         return menu
     }
 }
