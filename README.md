@@ -53,3 +53,22 @@ iOS(16.4)
 - contentHorizontalAlignment
 - title
 - currentTitle
+
+## UIImageView
+
+iOS(16.4)
+- image 
+- highlightedImage
+- tintColor
+- isUserInteractionEnabled
+- animationImages
+- animationDuration
+- animationRepeatCount
+
+iOS(17.0) - 추가 예정
+- addSymbolEffect
+- removeSymbolEffect
+- removeAllSymbolEffects
+- setSymbolImage
+
+
