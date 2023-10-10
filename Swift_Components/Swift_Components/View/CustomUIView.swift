@@ -11,6 +11,8 @@ import SnapKit
 
 final class CustomUIView: UIView {
     
+    // MARK: - ios17 : updateTraitsIfNeeded
+    
     // MARK: - isUserInteractionEnabled, tag, userInterfaceLayoutDirection
     // canBecomeFocused, isFocused: appleTV나 tvOS에서 많이 쓰임. 사용자의 포커스가 이동해서 해당뷰로 이동할수 있다면 true 반환
     // userInterfaceLayoutDirection: 레이아웃 방향을 나타냄(다국어, 다국적 지원)
@@ -32,6 +34,10 @@ final class CustomUIView: UIView {
         view.backgroundColor = .green
         return view
     }()
+    // MARK: - gestureRecognizers: 뷰에 연결된 제스처 인식기 객체의 배열
+    // addGestureRecognizer, removeGestureRecognizer,
+    // gestureRecognizerShouldBegin -> Bool: 제스처 동작 활성화 조절
+    // 사용자의 터치 동작을 인식하고 해당 동작에 대한 액션을 실행하는데 사용
     private let customView4: UIView = {
         let view = UIView()
         view.backgroundColor = .brown
@@ -47,11 +53,14 @@ final class CustomUIView: UIView {
     private let customView5: UIView = {
         let view = UIView()
         view.backgroundColor = .red
-        view.alpha = 0.5
+        view.alpha = 0.1
         view.contentMode = .bottom
         return view
     }()
-    
+    // MARK: - addMotionEffect: 기기의 움직임에 따라 뷰의 움직임을 조절하거나 시각적 효과를 뷰여하는ㄷ 사용
+    // addMotionEffect, removeMotionEffect, motionEffects 모션 조건을 걸때
+    // MARK: - intrinsicContentSize: 기본 사이즈에서 변경 가능
+    // invalidateIntrinsicContentSize: intrinsicContentSize 무시하고 재계산할때 호출
     // MARK: - init
     
     override init(frame: CGRect) {
@@ -61,6 +70,7 @@ final class CustomUIView: UIView {
 //        self.descendantView()
 //        self.findSubviewWithTag()
         self.setupMasking()
+        self.setupAnimation()
     }
     
     required init?(coder: NSCoder) {
@@ -68,7 +78,8 @@ final class CustomUIView: UIView {
     }
     
     // MARK: - func
-    
+    // MARK: - updateConstraintsIfNeeded: 레이아웃 조건 변경하고 재계산해서 업데이트
+    // updateConstraints, needsUpdateConstraints, setNeedsUpdateConstraints
     private func setupLayout() {
         self.addSubview(self.customView1)
         self.customView1.snp.makeConstraints {
@@ -168,7 +179,7 @@ final class CustomUIView: UIView {
     }
     
     // MARK: - mask: 뷰의 내용을 특정한 모양 또는 패턴으로 마스킹하고 표시할 수 있게 해줌
-    // 마스크 레이어가 불투명한 영역은 뷰의 콘텐츠를 보여주고, 투명한 영역은 숨긴다. 
+    // 마스크 레이어가 불투명한 영역은 뷰의 콘텐츠를 보여주고, 투명한 영역은 숨긴다.
     private func setupMasking() {
         let maskLayer = CAShapeLayer()
         let maskPath = UIBezierPath(ovalIn: CGRect(x: 20, y: 20, width: 100, height: 100))
@@ -177,6 +188,22 @@ final class CustomUIView: UIView {
         self.customView5.layer.mask = maskLayer
     }
     
+    // MARK: - setAnimationsEnabled: 애니메이션 활성화 또는 비활성화 할 때 사용된다. 이 메서드를 통해 애니메이션을 전역적으로 활성화하거나 비활성화 할 수 있다.
+    // areAnimationsEnabled 현재 애니메이션이 활성화 되어있나를 나타냄
+    // performWithoutAnimation: 애니메이션 없이 프로퍼티 변경 적용
+    // inheritedAnimationDuration: 부모 뷰로부터 상속된 애니메이션 동작 시간
+    private func setupAnimation() {
+        UIView.setAnimationsEnabled(true)
+        UIView.animate(withDuration: 2) {
+            self.customView5.alpha = 1
+        }
+        if UIView.areAnimationsEnabled {
+            print("enabled")
+        } else {
+            print("disabled")
+        }
+        
+    }
 }
 
 #if canImport(SwiftUI) && DEBUG
