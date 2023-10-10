@@ -78,6 +78,7 @@ iOS(17.0) - 추가 예정
 iOS(17.0) - 추가 예정
 - updateTraitsIfNeeded
 
+그 이전
 - isUserInteractionEnabled
 - tag
 - userInterfaceLayoutDirection
