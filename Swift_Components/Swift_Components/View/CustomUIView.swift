@@ -42,6 +42,15 @@ final class CustomUIView: UIView {
         textField.backgroundColor = .gray
         return textField
     }()
+    // alpha, isOpaque: 뷰가 투명한지 아닌지 반환(투명하지 않으면 true), clearsContextBeforeDrawing: drawing이 시작되기 전에 그래픽 컨텍스트를 지울지말지
+    // contentMode: 뷰의 콘텐츠가 뷰의 프레임에 어떻게 맞추어져야하는지 결정하는 열거형
+    private let customView5: UIView = {
+        let view = UIView()
+        view.backgroundColor = .red
+        view.alpha = 0.5
+        view.contentMode = .bottom
+        return view
+    }()
     
     // MARK: - init
     
@@ -49,8 +58,9 @@ final class CustomUIView: UIView {
         super.init(frame: frame)
         self.setupLayout()
         self.configureUI()
-        self.descendantView()
-        self.findSubviewWithTag()
+//        self.descendantView()
+//        self.findSubviewWithTag()
+        self.setupMasking()
     }
     
     required init?(coder: NSCoder) {
@@ -87,6 +97,14 @@ final class CustomUIView: UIView {
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(60)
         }
+        
+        self.addSubview(self.customView5)
+        self.customView5.snp.makeConstraints {
+            $0.top.equalTo(self.textField1.snp.bottom).offset(10)
+            $0.leading.equalTo(self.customView3.snp.leading)
+            $0.width.height.equalTo(150)
+        }
+        
         // MARK: - keyboardLayoutGuide: 키보드 상단에 따라 위치가 조정됨
         self.addSubview(self.customView4)
         self.customView4.snp.makeConstraints {
@@ -147,6 +165,16 @@ final class CustomUIView: UIView {
         } else {
             print("없음")
         }
+    }
+    
+    // MARK: - mask: 뷰의 내용을 특정한 모양 또는 패턴으로 마스킹하고 표시할 수 있게 해줌
+    // 마스크 레이어가 불투명한 영역은 뷰의 콘텐츠를 보여주고, 투명한 영역은 숨긴다. 
+    private func setupMasking() {
+        let maskLayer = CAShapeLayer()
+        let maskPath = UIBezierPath(ovalIn: CGRect(x: 20, y: 20, width: 100, height: 100))
+        maskLayer.path = maskPath.cgPath
+        
+        self.customView5.layer.mask = maskLayer
     }
     
 }
