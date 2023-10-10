@@ -72,3 +72,51 @@ iOS(17.0) - 추가 예정
 - setSymbolImage
 
 
+
+## UIView
+
+iOS(17.0) - 추가 예정
+- updateTraitsIfNeeded
+
+- isUserInteractionEnabled
+- tag
+- userInterfaceLayoutDirection
+- canBecomeFocused
+- isFocused
+- userInterfaceLayoutDirection
+- registerForTraitChanges
+- gestureRecognizers
+- addGestureRecognizer
+- removeGestureRecognizer
+- gestureRecognizerShouldBegin
+- isOpaque
+- alpha
+- contentMode
+- clearsContextBeforeDrawing
+- addMotionEffect
+- removeMotionEffect
+- intrinsicContentSize
+- invalidateIntrinsicContentSize
+- updateConstraintsIfNeeded
+- updateConstraints
+- needsUpdateConstraints
+- setNeedsUpdateConstraints
+- keyboardLayoutGuide
+- bringSubviewToFront
+- sendSubviewToBack
+- insertSubview
+- exchangeSubview
+- subview
+- didAddSubview
+- willRemoveSubview
+- willMove
+- didMoveToSuperview
+- descendantView
+- findSubviewWithTag
+- mask
+- setAnimationsEnabled
+- areAnimationsEnabled
+- performWithoutAnimation
+- inheritedAnimationDuration
+
+
