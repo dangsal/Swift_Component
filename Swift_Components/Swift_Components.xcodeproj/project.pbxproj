@@ -24,6 +24,8 @@
 		D7A396942ACD211200518ACB /* UIImageViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A396932ACD211200518ACB /* UIImageViewView.swift */; };
 		D7B5B4752ACE4668006D027E /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5B4742ACE4668006D027E /* CustomUIView.swift */; };
 		D7B5B4772ACE46CE006D027E /* CustomUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5B4762ACE46CE006D027E /* CustomUIViewController.swift */; };
+		D7C46AA22AD6D47500E5B2AC /* CALayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C46AA12AD6D47500E5B2AC /* CALayerViewController.swift */; };
+		D7C46AA42AD6D48000E5B2AC /* CALayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C46AA32AD6D48000E5B2AC /* CALayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		D7A396932ACD211200518ACB /* UIImageViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewView.swift; sourceTree = "<group>"; };
 		D7B5B4742ACE4668006D027E /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		D7B5B4762ACE46CE006D027E /* CustomUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIViewController.swift; sourceTree = "<group>"; };
+		D7C46AA12AD6D47500E5B2AC /* CALayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerViewController.swift; sourceTree = "<group>"; };
+		D7C46AA32AD6D48000E5B2AC /* CALayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 		D769E5082AC4622400DA735A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D7C46AA12AD6D47500E5B2AC /* CALayerViewController.swift */,
 				D769E4F22AC460B300DA735A /* UILabelViewController.swift */,
 				D769E5162AC5194400DA735A /* UIButtonViewController.swift */,
 				D7A396912ACD20FA00518ACB /* UIImageViewController.swift */,
@@ -122,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				D769E5132AC5161000DA735A /* UIComponent */,
+				D7C46AA32AD6D48000E5B2AC /* CALayerView.swift */,
 				D769E50A2AC4626F00DA735A /* UILabelView.swift */,
 				D769E51A2AC520FB00DA735A /* UIButtonView.swift */,
 				D7A396932ACD211200518ACB /* UIImageViewView.swift */,
@@ -225,8 +231,10 @@
 				D7A396942ACD211200518ACB /* UIImageViewView.swift in Sources */,
 				D7A396922ACD20FA00518ACB /* UIImageViewController.swift in Sources */,
 				D7B5B4772ACE46CE006D027E /* CustomUIViewController.swift in Sources */,
+				D7C46AA42AD6D48000E5B2AC /* CALayerView.swift in Sources */,
 				D769E5072AC461A300DA735A /* UIView+Preview.swift in Sources */,
 				D769E5052AC4618300DA735A /* UIViewController+Preview.swift in Sources */,
+				D7C46AA22AD6D47500E5B2AC /* CALayerViewController.swift in Sources */,
 				D769E50B2AC4626F00DA735A /* UILabelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

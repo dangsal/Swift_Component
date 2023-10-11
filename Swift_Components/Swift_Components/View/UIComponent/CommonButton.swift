@@ -13,6 +13,7 @@ protocol CommonButtonDelegate: AnyObject {
     func didTapUIButton()
     func didTapImageView()
     func didTapUIView()
+    func didTapCALayer()
 }
 
 final class CommonButton: UIButton {
@@ -44,8 +45,11 @@ final class CommonButton: UIButton {
         let uiView = UIAction(title: "UIView") { [weak self] _ in
             self?.delegate?.didTapUIView()
         }
+        let caLayer = UIAction(title: "CALayer") { [weak self] _ in
+            self?.delegate?.didTapCALayer()
+        }
         
-        let menu = UIMenu(title: "어떤 컴포넌트로?", children: [uiButton, uiImageView, uiView])
+        let menu = UIMenu(title: "어떤 컴포넌트로?", children: [uiButton, uiImageView, uiView, caLayer])
         return menu
     }
 }
