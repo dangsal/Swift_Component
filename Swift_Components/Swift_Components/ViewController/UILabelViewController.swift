@@ -53,4 +53,9 @@ extension LabelViewController: CommonButtonDelegate {
         let viewController = CALayerViewController()
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    func didTapTableView() {
+        let viewController = CustomTableViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }

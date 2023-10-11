@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D706D9B42AD6FC0B00F44FD3 /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706D9B32AD6FC0B00F44FD3 /* CustomTableView.swift */; };
+		D706D9B62AD6FC7700F44FD3 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706D9B52AD6FC7700F44FD3 /* CustomTableViewController.swift */; };
 		D769E4EF2AC460B300DA735A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769E4EE2AC460B300DA735A /* AppDelegate.swift */; };
 		D769E4F12AC460B300DA735A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769E4F02AC460B300DA735A /* SceneDelegate.swift */; };
 		D769E4F32AC460B300DA735A /* UILabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769E4F22AC460B300DA735A /* UILabelViewController.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D706D9B32AD6FC0B00F44FD3 /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
+		D706D9B52AD6FC7700F44FD3 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		D769E4EB2AC460B300DA735A /* Swift_Components.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Components.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D769E4EE2AC460B300DA735A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D769E4F02AC460B300DA735A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				D769E5162AC5194400DA735A /* UIButtonViewController.swift */,
 				D7A396912ACD20FA00518ACB /* UIImageViewController.swift */,
 				D7B5B4762ACE46CE006D027E /* CustomUIViewController.swift */,
+				D706D9B52AD6FC7700F44FD3 /* CustomTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 				D769E51A2AC520FB00DA735A /* UIButtonView.swift */,
 				D7A396932ACD211200518ACB /* UIImageViewView.swift */,
 				D7B5B4742ACE4668006D027E /* CustomUIView.swift */,
+				D706D9B32AD6FC0B00F44FD3 /* CustomTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,10 +237,12 @@
 				D7A396942ACD211200518ACB /* UIImageViewView.swift in Sources */,
 				D7A396922ACD20FA00518ACB /* UIImageViewController.swift in Sources */,
 				D7B5B4772ACE46CE006D027E /* CustomUIViewController.swift in Sources */,
+				D706D9B62AD6FC7700F44FD3 /* CustomTableViewController.swift in Sources */,
 				D7C46AA42AD6D48000E5B2AC /* CALayerView.swift in Sources */,
 				D769E5072AC461A300DA735A /* UIView+Preview.swift in Sources */,
 				D769E5052AC4618300DA735A /* UIViewController+Preview.swift in Sources */,
 				D7C46AA22AD6D47500E5B2AC /* CALayerViewController.swift in Sources */,
+				D706D9B42AD6FC0B00F44FD3 /* CustomTableView.swift in Sources */,
 				D769E50B2AC4626F00DA735A /* UILabelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
