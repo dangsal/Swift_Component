@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D706D9B42AD6FC0B00F44FD3 /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706D9B32AD6FC0B00F44FD3 /* CustomTableView.swift */; };
 		D706D9B62AD6FC7700F44FD3 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706D9B52AD6FC7700F44FD3 /* CustomTableViewController.swift */; };
+		D70BE11E2ADC10D700C0FB3F /* Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70BE11C2ADC10C600C0FB3F /* Calculator.framework */; };
+		D70BE11F2ADC10D700C0FB3F /* Calculator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D70BE11C2ADC10C600C0FB3F /* Calculator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D769E4EF2AC460B300DA735A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769E4EE2AC460B300DA735A /* AppDelegate.swift */; };
 		D769E4F12AC460B300DA735A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769E4F02AC460B300DA735A /* SceneDelegate.swift */; };
 		D769E4F32AC460B300DA735A /* UILabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769E4F22AC460B300DA735A /* UILabelViewController.swift */; };
@@ -30,9 +32,34 @@
 		D7C46AA42AD6D48000E5B2AC /* CALayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C46AA32AD6D48000E5B2AC /* CALayerView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D70BE11B2ADC10C600C0FB3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D70BE1172ADC10C600C0FB3F /* Calculator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D70BE10A2ADC104400C0FB3F;
+			remoteInfo = Calculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D70BE1202ADC10D700C0FB3F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D70BE11F2ADC10D700C0FB3F /* Calculator.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D706D9B32AD6FC0B00F44FD3 /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		D706D9B52AD6FC7700F44FD3 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		D70BE1172ADC10C600C0FB3F /* Calculator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Calculator.xcodeproj; path = ../../../../Calculator/Calculator.xcodeproj; sourceTree = "<group>"; };
 		D769E4EB2AC460B300DA735A /* Swift_Components.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Components.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D769E4EE2AC460B300DA735A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D769E4F02AC460B300DA735A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,17 +88,42 @@
 			files = (
 				D769E50E2AC462B000DA735A /* SnapKit in Frameworks */,
 				D769E5102AC462B000DA735A /* SnapKit-Dynamic in Frameworks */,
+				D70BE11E2ADC10D700C0FB3F /* Calculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D70BE1162ADC10B100C0FB3F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				D70BE1172ADC10C600C0FB3F /* Calculator.xcodeproj */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		D70BE1182ADC10C600C0FB3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D70BE11C2ADC10C600C0FB3F /* Calculator.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D70BE11D2ADC10D700C0FB3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D769E4E22AC460B300DA735A = {
 			isa = PBXGroup;
 			children = (
 				D769E4ED2AC460B300DA735A /* Swift_Components */,
 				D769E4EC2AC460B300DA735A /* Products */,
+				D70BE11D2ADC10D700C0FB3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +143,7 @@
 				D769E5082AC4622400DA735A /* ViewController */,
 				D769E5032AC4617900DA735A /* Extension */,
 				D769E4FC2AC460B400DA735A /* Info.plist */,
+				D70BE1162ADC10B100C0FB3F /* Module */,
 			);
 			path = Swift_Components;
 			sourceTree = "<group>";
@@ -160,6 +213,7 @@
 				D769E4E72AC460B300DA735A /* Sources */,
 				D769E4E82AC460B300DA735A /* Frameworks */,
 				D769E4E92AC460B300DA735A /* Resources */,
+				D70BE1202ADC10D700C0FB3F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,12 +257,28 @@
 			);
 			productRefGroup = D769E4EC2AC460B300DA735A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D70BE1182ADC10C600C0FB3F /* Products */;
+					ProjectRef = D70BE1172ADC10C600C0FB3F /* Calculator.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D769E4EA2AC460B300DA735A /* Swift_Components */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D70BE11C2ADC10C600C0FB3F /* Calculator.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Calculator.framework;
+			remoteRef = D70BE11B2ADC10C600C0FB3F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D769E4E92AC460B300DA735A /* Resources */ = {
@@ -394,7 +464,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -422,7 +492,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

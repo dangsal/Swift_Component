@@ -7,6 +7,7 @@
 
 import UIKit
 
+import Calculator
 import SnapKit
 
 // FIXME: iOS 16.4 기준이고 iOS 17의 기능은 추가 할 예정
@@ -98,6 +99,7 @@ final class UILabelView: UIView {
         super.init(frame: frame)
         self.configureUI()
         self.setupLayout()
+//        self.addNumber()
     }
     
     @available(*, unavailable)
@@ -166,6 +168,11 @@ final class UILabelView: UIView {
     
     func configureDelegate(_ commoneDelegate: CommonButtonDelegate) {
         self.nextButton.delegate = commoneDelegate
+    }
+    
+    private func addNumber() {
+        let addNumberText = Calculator().add(1, 2).description
+        self.label2.text = addNumberText
     }
 }
 
